@@ -35,6 +35,6 @@ router.post('/API/fincas', async(req,res)=>{
 //definimos la ruta para actualizar una finca por su id
 router.get('/API/fincas/:id', async(red,res)=>{
     const id = req.params.id;
-    const respuesta=await FincaModel.findById(id);
+    const respuesta=await FincaModel.findById(id)
     res.json(respuesta)
 })
