@@ -1,7 +1,8 @@
 //traemos a mongoose
 const mongoose=require('mongoose');
+require('dotenv').config()
 //definimos la url de nuestra base de datos
-const url ='mongodb+srv://LMendoza:luismendoza@catando.yafsmbr.mongodb.net/Catando5C?retryWrites=true&w=majority&appName=Catando'
+const url=process.env.ruta
 //conectamos la base de datos
 async function Conectar(){
     mongoose.set('strictQuery',true)
